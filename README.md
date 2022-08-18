@@ -21,7 +21,7 @@ $> Enter the path where the new project will be created:
 8. Enter the path and press enter.
 9. The new project will be created with the defined name and path location.
 
-## What is this Project Doing under the Hood?
+## What is the vscode_cpp_generator.bat file Doing under the Hood?
 
 The "vscode_cpp_generator.bat" file is performing the following actions:
 
