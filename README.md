@@ -78,5 +78,5 @@ Project's Name (Defined by you)
 
 ## Additional Notes
 
-* If you build the project in *Debug* mode but you try to run the *Release* executable (i.e., by selecting the Release option when pressing the **Ctrl + Alt + F5** shortcut), you are going to encounter an issue beacuse you are trying to run an executable that has not been built. If you wish to build another configuration (for example you are in *Release* mode and want to build the *Debug* option), you need to start since *step 5* from the previous section.
+* If you build the project in *Debug* mode but you try to run the *Release* executable (i.e., by selecting the *Release* option when pressing the **Ctrl + Alt + F5** shortcut), you are going to encounter an issue beacuse you are trying to run an executable that has not been built. If you wish to build another configuration (for example you are in *Release* mode and want to build the *Debug* option), you need to start since *step 5* from the previous section and select the corresponding build configuration.
 
