@@ -92,7 +92,7 @@ That for example has been created inside the file **unit_tests_module_1.cpp**, i
 Project_name/src/tests/tests/
 ```
 
-Then update the CMake file at the test's sources section:
+Then update the *CMakeLists.txt* file at the test's sources section:
 
 ```
 set(TEST_SOURCES    
@@ -101,7 +101,7 @@ set(TEST_SOURCES
     src/tests/tests/unit_tests_module_1.cpp      # This is the new line
 )
 ```
-Save the file and then build the project. 
+Save the *CMakeLists.txt* file and then build the project. 
 
 #### If it's a Benchmark Test
 
@@ -111,7 +111,7 @@ That for example has been created inside the file **benchmark_tests_module_1.cpp
 Project_name/src/tests/benchmarks/
 ```
 
-Then update the CMake file at the Benchmark's sources section:
+Then update the *CMakeLists.txt* file at the Benchmark's sources section:
 
 ```
 set(BENCHMARK_SOURCES    
@@ -121,7 +121,7 @@ set(BENCHMARK_SOURCES
     src/tests/benchmarks/benchmark_tests_module_1.cpp       # This is the new line
 )
 ```
-Save the file and then build the project. 
+Save the *CMakeLists.txt* file and then build the project. 
 
 #### If it's a Source Code File
 
@@ -131,7 +131,7 @@ If the source code file is for example a class called **Shape**, and it has the 
 Project_name/src/
 ```
 
-Then update the CMake file at the Project's sources section:
+Then update the *CMakeLists.txt* file at the Project's sources section:
 
 ```
 set(PROJECT_SOURCES
@@ -142,4 +142,4 @@ set(PROJECT_SOURCES
 ```
 **Note:** You can, of course, create a new folder structure inside the **src** folder, so you don't end up with a huge list of individual \*.h & \*.cpp files.
 
-Save the file and then build the project. 
+Save the *CMakeLists.txt* file and then build the project. 
