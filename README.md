@@ -78,5 +78,68 @@ Project's Name (Defined by you)
 
 ## Additional Notes
 
-* If you build the project in *Debug* mode but you try to run the *Release* executable (i.e., by selecting the *Release* option when pressing the **Ctrl + Alt + F5** shortcut), you are going to encounter an issue because you are trying to run an executable that has not been built. If you wish to build another configuration (for example you are in *Release* mode and want to build the *Debug* option), you need to start at **step 5** from the previous section and select the corresponding build configuration.
+### Building vs Running
 
+If you build the project in *Debug* mode but you try to run the *Release* executable (i.e., by selecting the *Release* option when pressing the **Ctrl + Alt + F5** shortcut), you are going to encounter an issue because you are trying to run an executable that has not been built. If you wish to build another configuration (for example you are in *Release* mode and want to build the *Debug* option), you need to start at **step 5** from the previous section and select the corresponding build configuration.
+
+### When adding new files, please consider:
+
+#### If it's a Unit Test
+
+That for example has been created inside the file **unit_tests_module_1.cpp**, include the corresponding file in the path: 
+
+```
+Project_name/src/tests/tests/
+```
+
+Then update the CMake file at the test's sources section:
+
+```
+set(TEST_SOURCES    
+    src/tests/tests/tests.cpp
+    src/tests/tests/main.cpp
+    src/tests/tests/unit_tests_module_1.cpp      # This is the new line
+)
+```
+Save the file and then build the project. 
+
+#### If it's a Benchmark Test
+
+That for example has been created inside the file **benchmark_tests_module_1.cpp**, include the corresponding file in the path: 
+
+```
+Project_name/src/tests/benchmarks/
+```
+
+Then update the CMake file at the Benchmark's sources section:
+
+```
+set(BENCHMARK_SOURCES    
+    src/tests/benchmarks/benchmark_test_1.cpp
+    src/tests/benchmarks/benchmark_test_2.cpp
+    src/tests/benchmarks/main.cpp
+    src/tests/benchmarks/benchmark_tests_module_1.cpp       # This is the new line
+)
+```
+Save the file and then build the project. 
+
+#### If it's a Source Code File
+
+If the source code file is for example a class called **Shape**, and it has the corresponding \*.cpp and \*.h files, add them in the path: 
+
+```
+Project_name/src/
+```
+
+Then update the CMake file at the Project's sources section:
+
+```
+set(PROJECT_SOURCES
+    src/main.cpp
+    src/shape.h           # This is the new line
+    src/shape.cpp         # This is the new line
+)
+```
+**Note:** You can, of course, create a new folder structure inside the **src** folder, so you don't end up with a huge list of individual \*.h & \*.cpp files.
+
+Save the file and then build the project. 
