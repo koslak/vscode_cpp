@@ -32,3 +32,5 @@ rename %full_project_path%\CMakeLists2.txt CMakeLists.txt
 call BatchSubstitute.bat "zero" %project_folder_name% %full_project_path%\.vscode\launch.json>%full_project_path%\.vscode\launch2.json
 del %full_project_path%\.vscode\launch.json
 rename %full_project_path%\.vscode\launch2.json launch.json
+
+del %full_project_path%\build\dummy_file.txt
