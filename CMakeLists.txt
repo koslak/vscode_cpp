@@ -33,6 +33,7 @@ endif()
 
 set(PROJECT_SOURCES
     src/main.cpp
+    src/solution.h
 )
 
 set(TEST_SOURCES
