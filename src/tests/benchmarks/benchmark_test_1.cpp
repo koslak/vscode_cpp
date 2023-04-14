@@ -22,7 +22,7 @@ static void BM_Solution(benchmark::State &state)
     for(auto _ : state)
     {
         Solution solution;
-        benchmark::DoNotOptimize(solution.calPoints(v));
+        benchmark::DoNotOptimize(solution.cal_points(v));
     }
 
     state.SetComplexityN(n);
