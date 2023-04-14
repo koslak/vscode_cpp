@@ -1,5 +1,8 @@
 #include <gtest/gtest.h>
 
+#include <ranges>
+#include <algorithm>
+
 void print(auto &&r)
 {
     std::ranges::for_each(std::forward<decltype(r)>(r), [](auto &&i) { std::cout << i << ' '; });
